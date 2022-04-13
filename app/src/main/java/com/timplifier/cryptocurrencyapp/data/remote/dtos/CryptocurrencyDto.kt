@@ -2,10 +2,11 @@ package com.timplifier.cryptocurrencyapp.data.remote.dtos
 
 
 import com.google.gson.annotations.SerializedName
+import com.timplifier.cryptocurrencyapp.base.BaseDiffModel
 
 data class CryptocurrencyDto(
     @SerializedName("id")
-    val id: String,
+    override val id: String,
     @SerializedName("name")
     val name: String,
     @SerializedName("symbol")
@@ -18,4 +19,4 @@ data class CryptocurrencyDto(
     val isActive: Boolean,
     @SerializedName("type")
     val type: String
-)
+) : BaseDiffModel
