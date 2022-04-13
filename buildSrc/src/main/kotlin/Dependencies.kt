@@ -3,6 +3,7 @@ object Dependencies {
     object Kotlin {
 
         const val coroutines = "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.0"
+        const val kotlinGradle = "org.jetbrains.kotlin:kotlin-gradle-plugin:1.6.20"
 
         object KSP {
             const val ksp = "com.google.devtools.ksp"
@@ -10,7 +11,6 @@ object Dependencies {
         }
     }
 
-    // App
     object UIComponents {
         const val material = "com.google.android.material:material:1.5.0"
         const val constraintLayout = "androidx.constraintlayout:constraintlayout:2.1.3"
@@ -117,5 +117,9 @@ object Dependencies {
         private const val version = "3.2.0-beta-1"
         const val koinAndroid = "io.insert-koin:koin-android:$version"
 
+    }
+
+    object Gradle {
+        private const val gradlePlugin = "com.android.tools.build:gradle:7.1.0"
     }
 }
