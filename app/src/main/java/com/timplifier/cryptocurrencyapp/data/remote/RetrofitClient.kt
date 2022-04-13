@@ -1,6 +1,7 @@
 package com.timplifier.cryptocurrencyapp.data.remote
 
 import com.timplifier.cryptocurrencyapp.common.constants.Constants.BASE_URL
+import com.timplifier.cryptocurrencyapp.data.remote.apiservices.CryptocurrencyApiService
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
@@ -25,5 +26,7 @@ class RetrofitClient {
         .client(okHttpClient)
         .build()
 
+    fun provideCryptocurrencyApiService(): CryptocurrencyApiService =
+        retrofit.create(CryptocurrencyApiService::class.java)
 
 }
