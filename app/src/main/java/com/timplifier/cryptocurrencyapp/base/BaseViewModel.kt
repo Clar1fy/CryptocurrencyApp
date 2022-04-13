@@ -1,5 +1,6 @@
 package com.timplifier.cryptocurrencyapp.base
 
+import android.app.Application
 import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -9,7 +10,7 @@ import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
 
-abstract class BaseViewModel
+abstract class BaseViewModel(application: Application)
 
     : ViewModel() {
 
