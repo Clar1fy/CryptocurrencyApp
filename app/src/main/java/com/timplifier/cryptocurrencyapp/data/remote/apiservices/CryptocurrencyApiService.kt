@@ -9,5 +9,5 @@ interface CryptocurrencyApiService {
     suspend fun fetchCryptocurrency(): List<CryptocurrencyDto>
 
     @GET("coins/{coin_id}")
-    suspend fun fetchSingleCryptocurrency(@Path("coin_id") id: Int): CryptocurrencyDto
+    suspend fun fetchSingleCryptocurrency(@Path("coin_id") id: String): CryptocurrencyDto
 }
