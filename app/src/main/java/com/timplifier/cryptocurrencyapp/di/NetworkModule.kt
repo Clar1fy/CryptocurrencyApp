@@ -2,7 +2,6 @@ package com.timplifier.cryptocurrencyapp.di
 
 import com.timplifier.cryptocurrencyapp.data.remote.RetrofitClient
 import dagger.Module
-import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
 import javax.inject.Singleton
@@ -13,8 +12,5 @@ object NetworkModule {
     @Singleton
     private val retrofitClient = RetrofitClient()
 
-    @Singleton
-    @Provides
-    fun provide
 
 }

@@ -3,6 +3,7 @@ package com.timplifier.cryptocurrencyapp.base
 import com.timplifier.cryptocurrencyapp.common.resource.Resource
 import kotlinx.coroutines.flow.flow
 import okio.IOException
+import retrofit2.HttpException
 
 abstract class BaseRepository {
 
@@ -17,12 +18,22 @@ abstract class BaseRepository {
 
                 emit(Resource.Success(it))
             }
-        } catch (e: IOException) {
+        } catch (ioException: IOException) {
             emit(
-                Resource.Error(null, e.localizedMessage ?: "An error occurred ! ")
+                Resource.Error(
+                    null,
+                    ioException.localizedMessage ?: "An IOException error occurred ! "
+                )
 
             )
-        } ca
+        } catch (httpException: HttpException) {
+            emit(
+                Resource.Error(
+                    null,
+                    httpException.localizedMessage ?: "An HttpException occurred!"
+                )
+            )
+        }
 
 
     }
@@ -35,6 +46,13 @@ abstract class BaseRepository {
         } catch (e: IOException) {
             emit(
                 Resource.Error(null, e.localizedMessage ?: "An error occurred!")
+            )
+        } catch (httpException: HttpException) {
+            emit(
+                Resource.Error(
+                    null,
+                    httpException.localizedMessage ?: "An HttpException occurred!"
+                )
             )
         }
     }
