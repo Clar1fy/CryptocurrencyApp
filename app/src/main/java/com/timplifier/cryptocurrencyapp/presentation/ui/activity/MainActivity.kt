@@ -1,7 +1,8 @@
-package com.timplifier.cryptocurrencyapp
+package com.timplifier.cryptocurrencyapp.presentation.ui.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.timplifier.cryptocurrencyapp.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
