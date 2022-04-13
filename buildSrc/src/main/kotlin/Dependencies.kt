@@ -54,6 +54,8 @@ object Dependencies {
         const val fragment = "androidx.navigation:navigation-fragment-ktx:$version"
         const val ui = "androidx.navigation:navigation-ui-ktx:$version"
         const val safeArgsPlugin = "androidx.navigation.safeargs.kotlin"
+        const val safeArgsGradlePlugin =
+            "androidx.navigation:navigation-safe-args-gradle-plugin:$version"
     }
 
     object Hilt {
@@ -62,6 +64,7 @@ object Dependencies {
         const val android = "com.google.dagger:hilt-android:$version"
         const val compiler = "com.google.dagger:hilt-compiler:$version"
         const val plugin = "com.google.dagger.hilt.android"
+        const val gradlePlugin = "com.google.dagger:hilt-android-gradle-plugin:$version"
     }
 
     object Retrofit {
@@ -120,6 +123,6 @@ object Dependencies {
     }
 
     object Gradle {
-        private const val gradlePlugin = "com.android.tools.build:gradle:7.1.0"
+        const val gradlePlugin = "com.android.tools.build:gradle:7.1.2"
     }
 }

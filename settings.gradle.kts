@@ -17,5 +17,5 @@ dependencyResolutionManagement {
         maven { url = uri("https://jitpack.io") }
     }
 }
-rootProject.name = "RestoBarApp"
+rootProject.name = "Cryptocurrency App"
 include(":app")
