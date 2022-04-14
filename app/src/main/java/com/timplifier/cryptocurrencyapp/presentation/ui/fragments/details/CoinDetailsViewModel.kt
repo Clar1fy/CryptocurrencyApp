@@ -13,5 +13,6 @@ class CoinDetailsViewModel @Inject constructor(
 
 
 ) {
+    fun fetchASingleCoin(id: String) = coinsRepository.fetchSingleCoin(id)
 
 }

@@ -10,7 +10,7 @@ import com.timplifier.cryptocurrencyapp.data.remote.dtos.CryptocurrencyDto
 import com.timplifier.cryptocurrencyapp.databinding.ItemCoinsBinding
 
 class CoinsAdapter(
-    private val onItemClick: (id: String) -> Unit
+    private val onItemClick: (name: String) -> Unit
 ) :
     ListAdapter<CryptocurrencyDto, CoinsAdapter.CoinsViewHolder>(
         BaseDiffUtil()
@@ -46,7 +46,7 @@ class CoinsAdapter(
                     false -> tvCoinStatus.setImageResource(R.drawable.coin_inactive_status)
                 }
                 root.setOnClickListener {
-                    onItemClick(dto.id)
+                    onItemClick(dto.name)
                 }
             }
 

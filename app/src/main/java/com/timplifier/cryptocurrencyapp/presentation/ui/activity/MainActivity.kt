@@ -17,6 +17,11 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         setupNavigation()
+        setupSupportActionBar()
+    }
+
+    private fun setupSupportActionBar() {
+        setSupportActionBar(binding.toolbar)
     }
 
     private fun setupNavigation() {

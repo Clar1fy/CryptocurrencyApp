@@ -52,10 +52,10 @@ class CoinListFragment :
         viewModel.fetchCoins()
     }
 
-    private fun onItemClick(id: String) {
+    private fun onItemClick(name: String) {
         findNavController().navigate(
             CoinListFragmentDirections.actionCoinListFragmentToCoinDetailsFragment(
-                id
+                name
             )
         )
     }
