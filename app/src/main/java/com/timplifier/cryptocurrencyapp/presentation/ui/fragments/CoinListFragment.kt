@@ -10,9 +10,11 @@ import com.timplifier.cryptocurrencyapp.base.BaseFragment
 import com.timplifier.cryptocurrencyapp.common.extensions.submitData
 import com.timplifier.cryptocurrencyapp.databinding.FragmentCoinListBinding
 import com.timplifier.cryptocurrencyapp.presentation.ui.adapters.CoinsAdapter
+import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
 
 
+@AndroidEntryPoint
 class CoinListFragment :
     BaseFragment<FragmentCoinListBinding, CoinListViewModel>(R.layout.fragment_coin_list) {
     override val binding by viewBinding(FragmentCoinListBinding::bind)
@@ -47,6 +49,7 @@ class CoinListFragment :
     }
 
     override fun setupRequest() {
+        viewModel.fetchCoins()
     }
 
     private fun onItemClick(id: String) {
