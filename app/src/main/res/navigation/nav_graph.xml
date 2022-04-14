@@ -20,7 +20,11 @@
         android:label="fragment_coin_details"
         tools:layout="@layout/fragment_coin_details">
         <argument
+            android:name="coinsId"
+            app:argType="string" />
+        <argument
             android:name="coinsName"
             app:argType="string" />
+
     </fragment>
 </navigation>
