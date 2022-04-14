@@ -11,9 +11,11 @@ fun Fragment.setToolbarTitle(name: String) {
 
 fun ImageView.setCoinStatus(status: Boolean?) {
     when (status) {
-        true -> this.setImageResource(R.drawable.coin_inactive_status)
-        else -> {
+        true -> this.setImageResource(R.drawable.coin_active_status)
+        false -> {
             this.setImageResource(R.drawable.coin_inactive_status)
+        }
+        else -> {
         }
     }
 }

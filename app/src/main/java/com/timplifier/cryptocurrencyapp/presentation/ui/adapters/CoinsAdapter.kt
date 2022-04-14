@@ -4,8 +4,8 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.timplifier.cryptocurrencyapp.R
 import com.timplifier.cryptocurrencyapp.base.BaseDiffUtil
+import com.timplifier.cryptocurrencyapp.common.extensions.setCoinStatus
 import com.timplifier.cryptocurrencyapp.data.remote.dtos.CryptocurrencyDto
 import com.timplifier.cryptocurrencyapp.databinding.ItemCoinsBinding
 
@@ -41,10 +41,7 @@ class CoinsAdapter(
                 tvCoinName.text = dto.name
                 tvCoinRank.text = dto.symbol
 
-                when (dto.isActive) {
-                    true -> tvCoinStatus.setImageResource(R.drawable.coin_active_status)
-                    false -> tvCoinStatus.setImageResource(R.drawable.coin_inactive_status)
-                }
+                tvCoinStatus.setCoinStatus(dto.isActive)
                 root.setOnClickListener {
                     onItemClick(dto.id, dto.name)
                 }
