@@ -9,7 +9,7 @@
         android:id="@+id/coinListFragment"
         android:name="com.timplifier.cryptocurrencyapp.presentation.ui.fragments.CoinListFragment"
         android:label="fragment_coin_list"
-        tools:layout="@layout/fragment_coin_list" >
+        tools:layout="@layout/fragment_coin_list">
         <action
             android:id="@+id/action_coinListFragment_to_coinDetailsFragment"
             app:destination="@id/coinDetailsFragment" />
@@ -18,8 +18,9 @@
         android:id="@+id/coinDetailsFragment"
         android:name="com.timplifier.cryptocurrencyapp.presentation.ui.fragments.details.CoinDetailsFragment"
         android:label="fragment_coin_details"
-        tools:layout="@layout/fragment_coin_details" >
-        <argument android:name="coin'sId"
+        tools:layout="@layout/fragment_coin_details">
+        <argument
+            android:name="coin'sId"
             app:argType="string" />
     </fragment>
 </navigation>

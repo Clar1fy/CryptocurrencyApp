@@ -24,7 +24,8 @@ class MainActivity : AppCompatActivity() {
             supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
         val navController = navHostFragment.navController
         val appBarConfiguration = AppBarConfiguration.Builder(
-            R.id.
+            R.id.coinListFragment,
+            R.id.coinDetailsFragment
         ).build()
         NavigationUI.setupWithNavController(binding.toolbar, navController, appBarConfiguration)
 
