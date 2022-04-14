@@ -8,7 +8,7 @@
     <fragment
         android:id="@+id/coinListFragment"
         android:name="com.timplifier.cryptocurrencyapp.presentation.ui.fragments.CoinListFragment"
-        android:label="fragment_coin_list"
+        android:label="Coins"
         tools:layout="@layout/fragment_coin_list">
         <action
             android:id="@+id/action_coinListFragment_to_coinDetailsFragment"
