@@ -5,9 +5,9 @@ import retrofit2.http.GET
 import retrofit2.http.Path
 
 interface CryptocurrencyApiService {
-    @GET("coins")
+    @GET("v1/coins")
     suspend fun fetchCryptocurrency(): List<CryptocurrencyDto>
 
-    @GET("coins/{coin_id}")
+    @GET("v1/coins/{coin_id}")
     suspend fun fetchSingleCryptocurrency(@Path("coin_id") id: String): CryptocurrencyDto
 }
