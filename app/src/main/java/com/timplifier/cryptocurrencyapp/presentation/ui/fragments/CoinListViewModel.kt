@@ -14,12 +14,19 @@ class CoinListViewModel @Inject constructor(
     private val coinsRepository: CoinsRepository
 
 ) : BaseViewModel() {
+    private var page: Int = 0
+    var isLoading: Boolean = false
 
     private val _coinsState = MutableLiveData<List<CryptocurrencyDto>>()
     var coinsState: LiveData<List<CryptocurrencyDto>> = _coinsState
 
     fun fetchCoins() {
-        coinsRepository.fetchCoins().gather(_coinsState)
+        isLoading = true
+        coinsRepository.fetchCoins().gather(_coinsState) {
+            page++
+            isLoading = false
+        }
+
     }
 
 }

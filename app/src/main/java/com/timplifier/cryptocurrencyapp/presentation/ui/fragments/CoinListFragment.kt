@@ -7,9 +7,11 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import by.kirich1409.viewbindingdelegate.viewBinding
 import com.timplifier.cryptocurrencyapp.R
 import com.timplifier.cryptocurrencyapp.base.BaseFragment
+import com.timplifier.cryptocurrencyapp.common.extensions.isInternetAvailable
 import com.timplifier.cryptocurrencyapp.common.extensions.submitData
 import com.timplifier.cryptocurrencyapp.databinding.FragmentCoinListBinding
 import com.timplifier.cryptocurrencyapp.presentation.ui.adapters.CoinsAdapter
+import com.timplifier.cryptocurrencyapp.utils.PaginationScrollListener
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
 
@@ -31,6 +33,12 @@ class CoinListFragment :
 
             adapter = coinsAdapter
             layoutManager = linearLayoutManager
+            addOnScrollListener(object : PaginationScrollListener(linearLayoutManager, {
+                if (isInternetAvailable(context)) viewModel.fetchCoins()
+            }) {
+                override fun isLoading() = viewModel.isLoading
+            })
+
         }
 
     }
@@ -49,7 +57,8 @@ class CoinListFragment :
     }
 
     override fun setupRequest() {
-        viewModel.fetchCoins()
+        if (viewModel.coinsState.value == null && isInternetAvailable(context))
+            viewModel.fetchCoins()
     }
 
     private fun onItemClick(id: String, name: String) {
