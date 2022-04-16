@@ -1,10 +1,14 @@
 package com.timplifier.cryptocurrencyapp.data.remote.dtos
 
 
+import androidx.room.Entity
+import androidx.room.PrimaryKey
 import com.google.gson.annotations.SerializedName
 import com.timplifier.cryptocurrencyapp.base.BaseDiffModel
 
+@Entity
 data class CryptocurrencyDto(
+    @PrimaryKey(autoGenerate = false)
     @SerializedName("id")
     override val id: String,
     @SerializedName("name")
