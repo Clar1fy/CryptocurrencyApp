@@ -39,6 +39,7 @@
                 android:fontFamily="@font/proxima_bold"
                 android:textColor="@color/white"
                 android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toEndOf="@id/tv_coin_rank"
                 app:layout_constraintTop_toTopOf="parent"
                 tools:text="@tools:sample/lorem" />
@@ -51,15 +52,15 @@
                 android:fontFamily="@font/proxima_regular"
                 android:textColor="@color/white"
                 android:textSize="14sp"
-                app:layout_constraintStart_toStartOf="@id/tv_coin_name"
-                app:layout_constraintTop_toBottomOf="@id/tv_coin_name"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/tv_coin_name"
+                app:layout_constraintTop_toTopOf="parent"
                 tools:text="@tools:sample/lorem" />
 
             <ImageView
                 android:id="@+id/tv_coin_status"
                 android:layout_width="10dp"
                 android:layout_height="10dp"
-                android:layout_marginTop="8dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />

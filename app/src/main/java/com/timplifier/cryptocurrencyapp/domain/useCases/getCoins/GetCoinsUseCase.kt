@@ -1,7 +1,6 @@
 package com.timplifier.cryptocurrencyapp.domain.useCases.getCoins
 
 import com.timplifier.cryptocurrencyapp.base.BaseUseCase
-import com.timplifier.cryptocurrencyapp.data.mapper.toCoin
 import com.timplifier.cryptocurrencyapp.domain.repositories.CoinRepository
 import javax.inject.Inject
 

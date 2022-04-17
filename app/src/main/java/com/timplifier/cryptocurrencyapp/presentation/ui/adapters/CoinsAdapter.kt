@@ -37,16 +37,14 @@ class CoinsAdapter(
         fun onBind(entity: CoinEntity) {
 
             binding.apply {
-                tvCoinRank.text = "($entity.rank)"
+                tvCoinRank.text = "$entity.rank."
                 tvCoinName.text = entity.name
-                tvCoinRank.text = entity.symbol
-
+                tvCoinRank.text = "($entity.symbol)"
                 tvCoinStatus.setCoinStatus(entity.isActive)
                 root.setOnClickListener {
-                    onItemClick(entity.id, entity.name)
+                    entity.id?.let { it1 -> onItemClick(it1, entity.name) }
                 }
             }
-
         }
 
     }
