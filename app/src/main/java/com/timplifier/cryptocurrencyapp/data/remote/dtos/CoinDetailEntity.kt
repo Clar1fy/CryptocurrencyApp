@@ -5,7 +5,7 @@ import com.google.gson.annotations.SerializedName
 
 data class CoinDetailEntity(
     @SerializedName("id")
-    val id: String,
+    val id: String? = null,
     @SerializedName("name")
     val name: String,
     @SerializedName("symbol")
@@ -22,8 +22,8 @@ data class CoinDetailEntity(
     val type: String,
     @SerializedName("tags")
     val tags: List<Tag>,
-    @SerializedName("team")
-    val team: List<Team>,
+    @SerializedName("teamEntity")
+    val teamEntity: List<TeamEntity>,
     @SerializedName("description")
     val description: String,
     @SerializedName("message")
