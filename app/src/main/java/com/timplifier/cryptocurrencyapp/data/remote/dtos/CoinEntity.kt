@@ -7,10 +7,10 @@ import com.google.gson.annotations.SerializedName
 import com.timplifier.cryptocurrencyapp.base.BaseDiffModel
 
 @Entity
-data class CryptocurrencyDto(
-    @PrimaryKey(autoGenerate = false)
+data class CoinEntity(
+    @PrimaryKey
     @SerializedName("id")
-    override val id: String,
+    override val id: String? = null,
     @SerializedName("name")
     val name: String,
     @SerializedName("symbol")

@@ -6,13 +6,13 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.timplifier.cryptocurrencyapp.base.BaseDiffUtil
 import com.timplifier.cryptocurrencyapp.common.extensions.setCoinStatus
-import com.timplifier.cryptocurrencyapp.data.remote.dtos.CryptocurrencyDto
+import com.timplifier.cryptocurrencyapp.data.remote.dtos.CoinEntity
 import com.timplifier.cryptocurrencyapp.databinding.ItemCoinsBinding
 
 class CoinsAdapter(
     private val onItemClick: (id: String, name: String) -> Unit
 ) :
-    ListAdapter<CryptocurrencyDto, CoinsAdapter.CoinsViewHolder>(
+    ListAdapter<CoinEntity, CoinsAdapter.CoinsViewHolder>(
         BaseDiffUtil()
     ) {
 
@@ -34,16 +34,16 @@ class CoinsAdapter(
 
     inner class CoinsViewHolder(private val binding: ItemCoinsBinding) :
         RecyclerView.ViewHolder(binding.root) {
-        fun onBind(dto: CryptocurrencyDto) {
+        fun onBind(entity: CoinEntity) {
 
             binding.apply {
-                tvCoinRank.text = "($dto.rank)"
-                tvCoinName.text = dto.name
-                tvCoinRank.text = dto.symbol
+                tvCoinRank.text = "($entity.rank)"
+                tvCoinName.text = entity.name
+                tvCoinRank.text = entity.symbol
 
-                tvCoinStatus.setCoinStatus(dto.isActive)
+                tvCoinStatus.setCoinStatus(entity.isActive)
                 root.setOnClickListener {
-                    onItemClick(dto.id, dto.name)
+                    onItemClick(entity.id, entity.name)
                 }
             }
 
@@ -52,17 +52,17 @@ class CoinsAdapter(
     }
 
 
-//    companion object : DiffUtil.ItemCallback<CryptocurrencyDto>() {
+//    companion object : DiffUtil.ItemCallback<CoinEntity>() {
 //        override fun areItemsTheSame(
-//            oldItem: CryptocurrencyDto,
-//            newItem: CryptocurrencyDto
+//            oldItem: CoinEntity,
+//            newItem: CoinEntity
 //        ) =
 //            oldItem.id == newItem.id
 //
 //
 //        override fun areContentsTheSame(
-//            oldItem: CryptocurrencyDto,
-//            newItem: CryptocurrencyDto
+//            oldItem: CoinEntity,
+//            newItem: CoinEntity
 //        ) =
 //            oldItem == newItem
 //
