@@ -37,5 +37,12 @@ navigationFragment = { module = "androidx.navigation:navigation-fragment-ktx", v
 navigationUi = { module = "androidx.navigation:navigation-ui-ktx", version.ref = "navigation" }
 
 hilt = { module = "com.google.dagger:hilt-android", version.ref = "hilt" }
+hiltCompiler = { module = "com.google.dagger:hilt-compiler", version.ref = "hilt" }
+hiltGradle = { module = "com.google.dagger:hilt-android-gradle-plugin", version.ref = "hilt" }
+
+retrofit = { module = "com.squareup.retrofit2:retrofit", version.ref = "retrofit" }
+gsonConverter = { module = "com.squareup.retrofit2:converter-gson", version.ref = "retrofit" }
+
+okHttpBom
 
 
