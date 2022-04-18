@@ -5,8 +5,8 @@ import androidx.fragment.app.Fragment
 import com.timplifier.cryptocurrencyapp.R
 import com.timplifier.cryptocurrencyapp.presentation.ui.activity.MainActivity
 
-fun Fragment.setToolbarTitle(name: String) {
-    (activity as MainActivity).supportActionBar?.title = name
+fun Fragment.setToolbarTitle(title: String) {
+    (activity as MainActivity).supportActionBar?.title = title
 }
 
 fun ImageView.setCoinStatus(status: Boolean?) {

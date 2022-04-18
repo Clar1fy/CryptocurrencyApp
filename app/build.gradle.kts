@@ -67,17 +67,17 @@ dependencies {
     implementation(Dependencies.Fragment.fragment)
 
     // Lifecycle
-    implementation(Dependencies.Lifecycle.runtime)
-    implementation(Dependencies.Lifecycle.viewModel)
-    implementation(Dependencies.Lifecycle.liveData)
+    implementation(libs.lifecycle.runtime )
+    implementation(libs.lifecycle.viewModelLifecycle)
+    implementation(libs.lifecycle.liveData)
 
     // Navigation
-    implementation(Dependencies.Navigation.fragment)
-    implementation(Dependencies.Navigation.ui)
+    implementation(libs.navigation.fragment)
+    implementation(libs.navigation.navigationUi)
 
     // Retrofit
-    implementation(Dependencies.Retrofit.retrofit)
-    implementation(Dependencies.Retrofit.converterGson)
+    implementation(libs.retrofit.retrofit)
+    implementation(libs.retrofit.gsonConverter)
 
     // OkHttpClient
     implementation(Dependencies.OkHttp.loggingInterceptor)
@@ -85,20 +85,19 @@ dependencies {
     implementation(Dependencies.OkHttp.bom)
 
     // Hilt
-    implementation(Dependencies.Hilt.android)
-    kapt(Dependencies.Hilt.compiler)
+    implementation(libs.hilt.hilt)
+    kapt(libs.hilt.compiler)
 
     // Legacy Support
     implementation("androidx.legacy:legacy-support-v4:1.0.0")
 
     // Glide
-    implementation(Dependencies.Glide.glide)
+    implementation(libs.glide.glide)
 
     // SplashScreen
-    implementation(Dependencies.SplashScreen.splashScreen)
-
+    implementation(libs.splashScreen.splashScreen)
     // Room with coroutines
-    implementation(Dependencies.Room.runtime)
-    implementation(Dependencies.Room.supportKotlinExtensionsAndCoroutines)
-    kapt(Dependencies.Room.compiler)
+    implementation(libs.room.runtime)
+    implementation(libs.room.kotlinExtensionsAndCoroutinesSupport)
+    kapt(libs.room.compiler)
 }
