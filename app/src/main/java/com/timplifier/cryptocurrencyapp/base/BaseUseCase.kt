@@ -1,5 +1,6 @@
 package com.timplifier.cryptocurrencyapp.base
 
+import com.timplifier.cryptocurrencyapp.R
 import com.timplifier.cryptocurrencyapp.common.resource.Resource
 import kotlinx.coroutines.flow.flow
 import retrofit2.HttpException
@@ -7,11 +8,15 @@ import java.io.IOException
 
 abstract class BaseUseCase {
 
-    protected fun <T> invoke(request: suspend () -> T) = flow {
+    protected fun <T> invoke(
+        request: suspend () -> T,
+        transform: (T) -> R
+    ) = flow {
 
         emit(Resource.Loading())
         try {
-            emit(Resource.Success(data = request()))
+            emit(Resource.Success(request()))
+            transform(request())
 
         } catch (io: IOException) {
             emit(

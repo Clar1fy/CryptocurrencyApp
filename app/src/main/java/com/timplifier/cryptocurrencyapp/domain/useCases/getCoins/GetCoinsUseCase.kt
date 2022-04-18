@@ -1,7 +1,10 @@
 package com.timplifier.cryptocurrencyapp.domain.useCases.getCoins
 
 import com.timplifier.cryptocurrencyapp.base.BaseUseCase
+import com.timplifier.cryptocurrencyapp.domain.model.Coin
 import com.timplifier.cryptocurrencyapp.domain.repositories.CoinRepository
+import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.map
 import javax.inject.Inject
 
 class GetCoinsUseCase @Inject constructor(
@@ -10,6 +13,5 @@ class GetCoinsUseCase @Inject constructor(
 
 
     operator fun invoke() = invoke {
-        val coins = coinRepository.getCoins().map { it.toCoin() }
     }
 }

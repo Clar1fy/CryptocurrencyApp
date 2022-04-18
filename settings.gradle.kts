@@ -19,3 +19,4 @@ dependencyResolutionManagement {
 }
 rootProject.name = "Cryptocurrency App"
 include(":app")
+enableFeaturePreview("VERSION_CATALOGS")
