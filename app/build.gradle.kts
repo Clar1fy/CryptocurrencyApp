@@ -82,7 +82,7 @@ dependencies {
     // OkHttpClient
     implementation(Dependencies.OkHttp.loggingInterceptor)
     implementation(Dependencies.OkHttp.okHttp)
-    implementation(Dependencies.OkHttp.bom)
+    implementation(libs.okHttp.bom)
 
     // Hilt
     implementation(libs.hilt.hilt)
