@@ -52,10 +52,10 @@ android {
 dependencies {
 
     // UI Components
-    implementation(Dependencies.UIComponents.appCompat)
-    implementation(Dependencies.UIComponents.material)
-    implementation(Dependencies.UIComponents.constraintLayout)
-    implementation(Dependencies.UIComponents.viewBindingPropertyDelegate)
+    implementation(libs.ui.appcompat)
+    implementation(libs.ui.material)
+    implementation(libs.ui.constraint)
+    implementation(libs.viewBinding.viewBindingPropertyDelegate)
 
     // Core
     implementation(libs.androidx.core)
