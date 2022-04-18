@@ -58,16 +58,16 @@ dependencies {
     implementation(Dependencies.UIComponents.viewBindingPropertyDelegate)
 
     // Core
-    implementation(Dependencies.Core.core)
+    implementation(libs.androidx.core)
 
     // Activity
-    implementation(Dependencies.Activity.activity)
+    implementation(libs.androidx.activity)
 
     // Fragment
-    implementation(Dependencies.Fragment.fragment)
+    implementation(libs.androidx.fragment)
 
     // Lifecycle
-    implementation(libs.lifecycle.runtime )
+    implementation(libs.lifecycle.runtime)
     implementation(libs.lifecycle.viewModelLifecycle)
     implementation(libs.lifecycle.liveData)
 

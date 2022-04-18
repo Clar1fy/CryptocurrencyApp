@@ -26,12 +26,12 @@ kotlin-gradle = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.
 android-gradle = { module = "com.android.tools.build:gradle", version.ref = "gradle" }
 
 androidx-core = { module = "androidx.core:core-ktx", version.ref = "core" }
-material-material = { module = "com.google.android.material:material", version.ref = "material" }
+ui-material = { module = "com.google.android.material:material", version.ref = "material" }
 androidx-fragment = { module = "androidx.fragment:fragment-ktx", version.ref = "fragment" }
 androidx-activity = { module = "androidx.activity:activity-ktx", version.ref = "activity" }
 lifecycle-runtime = { module = "androidx.lifecycle:lifecycle-runtime-ktx", version.ref = "lifecycle" }
-androidx-appcompat = { module = "androidx.appcompat:appcompat", version.ref = "appCompat" }
-androidx-constraint = { module = "androidx.constraintlayout:constraintlayout", version.ref = "constraint" }
+ui-appcompat = { module = "androidx.appcompat:appcompat", version.ref = "appCompat" }
+ui-constraint = { module = "androidx.constraintlayout:constraintlayout", version.ref = "constraint" }
 viewBinding-viewBindingPropertyDelegate = { module = "com.github.kirich1409:viewbindingpropertydelegate-noreflection", version.ref = "viewBindingPropertyDelegate" }
 
 lifecycle-viewModelLifecycle = { module = "androidx.lifecycle:lifecycle-viewmodel-ktx", version.ref = "lifecycle" }
