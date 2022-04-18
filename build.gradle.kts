@@ -5,10 +5,11 @@ buildscript {
     }
 
     dependencies {
-        classpath(Dependencies.Gradle.gradlePlugin)
-        classpath(Dependencies.Kotlin.kotlinGradle)
-        classpath(Dependencies.Hilt.gradlePlugin)
-        classpath(Dependencies.Navigation.safeArgsGradlePlugin)
-        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:1.6.20")
+        val libs = project.extensions.getByType<VersionCatalogsExtension>()
+            .named("libs") as org.gradle.accessors.dm.LibrariesForLibs
+        classpath(libs.kotlin.gradle)
+        classpath(libs.android.gradle)
+        classpath(libs.hilt.gradle)
+        classpath(libs.navigation.safeArgsGradle)
     }
 }
