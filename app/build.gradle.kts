@@ -68,7 +68,7 @@ dependencies {
 
     // Lifecycle
     implementation(libs.lifecycle.runtime)
-    implementation(libs.lifecycle.viewModelLifecycle)
+    implementation(libs.lifecycle.viewModel)
     implementation(libs.lifecycle.liveData)
 
     // Navigation
