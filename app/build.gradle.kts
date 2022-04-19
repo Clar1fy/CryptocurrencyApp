@@ -50,34 +50,26 @@ android {
 }
 
 dependencies {
-
     // UI Components
-    implementation(libs.ui.appcompat)
-    implementation(libs.ui.material)
-    implementation(libs.ui.constraint)
-    implementation(libs.viewBinding.viewBindingPropertyDelegate)
+    implementation(libs.bundles.uiComponents)
 
     // Core
-    implementation(libs.androidx.core)
+    implementation(libs.android.core)
 
     // Activity
-    implementation(libs.androidx.activity)
+    implementation(libs.fragment.activity)
 
     // Fragment
-    implementation(libs.androidx.fragment)
+    implementation(libs.fragment.fragment)
 
     // Lifecycle
-    implementation(libs.lifecycle.runtime)
-    implementation(libs.lifecycle.viewModel)
-    implementation(libs.lifecycle.liveData)
+    implementation(libs.bundles.lifecycleBundle)
 
     // Navigation
-    implementation(libs.navigation.fragment)
-    implementation(libs.navigation.navigationUi)
+    implementation(libs.bundles.navigationBundle)
 
     // Retrofit
-    implementation(libs.retrofit.retrofit)
-    implementation(libs.retrofit.gsonConverter)
+    implementation(libs.bundles.retrofitBundle)
 
     // OkHttpClient
     implementation(Dependencies.OkHttp.loggingInterceptor)
@@ -85,8 +77,7 @@ dependencies {
     implementation(libs.okHttp.bom)
 
     // Hilt
-    implementation(libs.hilt.hilt)
-    kapt(libs.hilt.compiler)
+    implementation(libs.bundles.hiltBundle)
 
     // Legacy Support
     implementation("androidx.legacy:legacy-support-v4:1.0.0")
@@ -95,9 +86,8 @@ dependencies {
     implementation(libs.glide.glide)
 
     // SplashScreen
-    implementation(libs.splashScreen.splashScreen)
+    implementation(libs.ui.splashScreen)
+
     // Room with coroutines
-    implementation(libs.room.runtime)
-    implementation(libs.room.kotlinExtensionsAndCoroutinesSupport)
-    kapt(libs.room.compiler)
+    implementation(libs.bundles.roomBundle)
 }
