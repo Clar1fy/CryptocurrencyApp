@@ -85,8 +85,7 @@ dependencies {
     implementation(Dependencies.OkHttp.bom)
 
     // Hilt
-    implementation(Dependencies.Hilt.android)
-    kapt(Dependencies.Hilt.compiler)
+    implementation(libs.bundles.hiltBundle)
 
     // Legacy Support
     implementation("androidx.legacy:legacy-support-v4:1.0.0")
